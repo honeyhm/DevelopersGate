@@ -1,0 +1,174 @@
+$articleBackgrandColor:#fff;
+$mainBaseColor: #6666CC;
+
+.categories{
+  margin: 15px 5px;
+
+  ul{
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+
+
+    li{
+      display: flex;
+      border-radius:18px;
+      margin: 10px;
+      padding: 8px;
+      width:25%;
+      height:45px;
+
+      img{
+        width: 30px;
+        height: 30px;
+        margin:0 5px;
+      }
+
+      .vacancy-numder{
+        font-size: x-small;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .category-name{
+        font-size: small;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+    }
+
+    li:first-child{
+      background-color: rgba(106, 106, 243 ,0.9);
+    }
+
+    li:nth-child(2){
+      background-color: rgba(147, 103, 230, 0.9);
+    }
+
+    li:nth-child(3){
+      background-color: rgba(255, 91, 132,0.9);
+    }
+
+    li:last-child{
+      background-color: rgba(255, 153, 51, 0.9);  
+    }
+
+  }
+
+}
+
+
+.main-title{
+  margin: 20px;
+  font-weight: bold;
+  font-size: large;
+}
+
+
+
+.article-flex{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+
+  article{
+    background-color: $articleBackgrandColor;
+    border-radius: 18px;
+    margin: 10px;
+    /* width: 31%; */
+    height:270px;
+    width: 260px;
+
+    div img{
+      margin: 10px;
+      border-radius: 18px;
+      width: 60px;
+      height: 60px;
+    }
+
+    .user-name{
+      font-weight: bold;
+      margin: 10px;
+    }
+
+    .price{
+      color: $mainBaseColor;
+    }
+
+    .vocation{
+      font-size: small;
+      color: grey;
+      /* margin-top: 7px; */
+      margin: 10px;
+    }
+
+
+  }
+
+
+}
+
+
+
+
+.attributes{
+  margin-left: 10px;
+
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+
+    li{
+      // background-color: #f0f0fa;
+      background-color: lighten($mainBaseColor, 35);
+      border-radius: 10px;
+      margin: 2Px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      color: Grey ;
+      font-size: small;
+      padding:5px 18px;
+
+    }
+
+  }
+
+}
+
+
+
+article div button{
+  border-radius: 10px;
+  border:1px solid rgb(199, 199, 199);
+  height: 35px;
+  width: 100px;
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+
+  :first-child{
+    background-color: rgba(88, 76, 247 ,0.8);
+    color: #fff;
+    margin-right: 3px;
+  }
+
+  :last-child{
+    background-color: #fff;
+    color: #6666CC;
+    margin-left: 3px;
+  }
+
+}
+
+

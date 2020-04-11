@@ -1,0 +1,3 @@
+@mixin verticalGradient($fromColor , $toColor) {
+  background: linear-gradient($fromColor, $fromColor 65%, $toColor 65%, $toColor);
+}
