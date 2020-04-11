@@ -11,71 +11,81 @@
     <main class="flex-container">
 
         <aside class="aside">
+
             <div class="aside-title">
                 <p>Filter</p>
             </div>
+
+            <br>
+
             <section>
                 <div class="aside-sub-title">
-                    <div>Profession</div>
-                    <span><img src="svg/g.svg" alt=""></span>
+                    <span class="open">Profession</span>
+                    <img src="svg/saved.svg" alt="">
                 </div>
+                <br>
                 <ul>
                     <li class="checkbox-list">
                         <div>
-                            <input type="checkbox" name="profession" id="java">Java
+                            <input type="checkbox" name="profession" id="java"><span>Java</span>
                         </div>
                         <span class="number">23</span>
                     </li>
         
                     <li class="checkbox-list">
                         <div>
-                            <input type="checkbox" name="profession" id="designer">Designer
+                            <input type="checkbox" name="profession" id="designer" checked="checked"><span>Designer</span>
                         </div>
                         <span class="number">42</span>
                     </li>
         
                     <li class="checkbox-list">
                         <div>
-                            <input type="checkbox" name="profession" id="qa">QA
+                            <input type="checkbox" name="profession" id="qa"><span>QA</span>
                         </div>
                         <span class="number">12</span>
                     </li>
                     <li class="checkbox-list">
                         <div>
-                            <input type="checkbox" name="profession" id="php">PHP
+                            <input type="checkbox" name="profession" id="php"><span>PHP</span>
                         </div>
                         <span class="number">31</span>
                     </li>
                 </ul>
             </section>
         
+            <br>
+
             <section>
                 <div class="aside-sub-title">
-                    <span>Platform</span>
+                    <span class="open">Platform</span>
                     <img src="svg/down-arrow.svg" alt="">
                 </div>
+                <br>
                 <ul>
                     <li class="checkbox-list">
                         <div>
-                            <input type="checkbox" name="platform" id="sketch">Sketch
+                            <input type="checkbox" name="platform" id="sketch" checked="checked"><span>Sketch</span>
                         </div>
                         <span class="image"><img src="img/sketch.png" alt="Sketch Logo"></span>
                     </li>
                     <li class="checkbox-list">
                         <div>
-                            <input type="checkbox" name="platform" id="figma">Figma
+                            <input type="checkbox" name="platform" id="figma"><span>Figma</span>
                         </div>
                         <span class="image"><img src="img/figma.png" alt="Figma Logo"></span>
                     </li>
                     <li class="checkbox-list">
                         <div>
-                            <input type="checkbox" name="platform" id="illustrator">Illustrator
+                            <input type="checkbox" name="platform" id="illustrator"><span>Illustrator</span>
                         </div>
                         <span class="image"><img src="img/illustrator.png" alt="Illustrator Logo"></span>
                     </li>
                 </ul>
             </section>
         
+            <br>
+
             <section>
                 <div class="aside-sub-title">
                     <span>Work Level</span>
@@ -83,6 +93,8 @@
                 </div>
             </section>
         
+            <br>
+
             <section>
                 <div class="aside-sub-title">
                     <span>Employee Type</span>
@@ -90,12 +102,15 @@
                 </div>
             </section>
         
+            <br>
+
             <section>
                 <div class="aside-sub-title">
                     <span>Salary Range</span>
                     <img src="svg/up-arrow.svg" alt="">
                 </div>
             </section>
+            
         </aside>
 
         <div class="flex-helper">
@@ -112,45 +127,44 @@
                 <div class="search-container">
                     <form action="">
                         <input type="text" name="search">
-                        <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
                         <button type="submit"><img src="img/search.png" alt="Search Image"></button>
                     </form>
                 </div>
                 <article class="profile">
                     <img src="img/avatar.png" alt="Profile Image">
-                    <div class="name">
-                        <div class="recnilter">Recnilter</div>
-                        <div class="recnilter-name">Honey</div>
+                    <div id="profile-name">
+                        <div>Recnilter</div>
+                        <div>Honey Honey</div>
                     </div>
                 </article>
             </header>
 
             <main class="main">
 
-                <section id="categories">
+                <section class="categories">
                     <ul>
-                        <li id="category1">
+                        <li>
                             <img src="svg/saved.svg" alt="Image For Saved Categry">
                             <div class="name">
                                 <div class="vacancy-numder">124 Vacancies</div>
                                 <div class="category-name">Saved</div>
                             </div>
                         </li>
-                        <li id="category2">
+                        <li>
                             <img src="svg/recommended.svg" alt="Image For Recommended Categry">
                             <div class="name">
                                 <div class="vacancy-numder">52 Vacancies</div>
                                 <div class="category-name">Recommended</div>
                             </div>
                         </li>
-                        <li id="category3">
+                        <li>
                             <img src="svg/remote.svg" alt="Image For Remote Categry">
                             <div class="name">
                                 <div class="vacancy-numder">89 Vacancies</div>
                                 <div class="category-name">Remote</div>
                             </div>
                         </li>
-                        <li id="category4">
+                        <li>
                             <img src="svg/outstaff.svg" alt="Image For Outstaff Categry">
                             <div class="name">
                                 <div class="vacancy-numder">26 Vacancies</div>
