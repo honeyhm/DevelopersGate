@@ -3,23 +3,22 @@ $navTextColor: #6666CC;
 
 .header{
   display: flex;
-  justify-content: left;
+  justify-content: flex-end;
   background-color: $headerBackgrandColor;
   border-radius: 0px 18px;
-  height:8%;
-  /* padding: 10px; */
-  align-items: stretch;
+  height:10%;
+  width: inherit;
+  margin-left: 15px;
+  padding-left: 20px;
+  align-items: center;
 }
 
 /* all direct childs of .header */
 .header > *{
-  margin-right: 10px;
-  padding-top: 1.5%;
-  /* padding-left: 10%; */
 }
 
 .nav{
-  flex-grow: 3;
+  flex-grow: 4;
 
   ul{
     display: flex;
@@ -27,25 +26,29 @@ $navTextColor: #6666CC;
     list-style: none;
     justify-content: space-evenly;
     height: 100%;
-    margin-left: 30px;
-    padding-top: 8px;
 
     li{
       width: 25%;
       align-items: stretch;
+      // padding: 0px 20px;
 
       a{
         display: block;
         text-decoration: none;
         text-align: center;
+        font-size: small;
         color: $navTextColor;
         transition: 0.3s;
       }
-
+      
+      // :first-child{
+      //   // padding-bottom: 30px;
+      //   align-items: stretch;
+      // }
     }
 
     .active{
-      box-shadow: inset 0 -2px $navTextColor;
+      // box-shadow: inset 0 -2px $navTextColor;
     }
 
   }
@@ -61,20 +64,21 @@ $navTextColor: #6666CC;
   }
 
   input{
+    width: 100px;
     border:0;
   }
 
   button{
-    border-radius: 18px;
+    border-radius: 10px;
     border: 0;
     background: #e9e9fc;
+    padding: 5px 8px;
   }
 
   img{
-    width: 40px;
-    height: 40px;
-    border-radius: 15px;
-    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 18px;
   }
 
 }
@@ -85,23 +89,22 @@ $navTextColor: #6666CC;
   flex-grow: 1;
 
   img{
-    /* display: inline-block; */
     border-radius: 12px;
     width: 40px;
     height: 40px;
-    margin-right: 10px;
+    margin: 0px 10px;
   }
 
   #profile-name{
     color: gray;
 
     :first-child{
-      font-size: small;
-      margin: 2px 0px;
+      font-size: x-small;
+      margin: 4px 0px;
     }
 
     :last-child{
-      font-size: large;
+      font-size: normal;
     }
 
   }

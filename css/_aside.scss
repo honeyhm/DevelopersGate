@@ -5,14 +5,13 @@ $asideColor: #9367e6;
 aside{
   background-color: $asideBackgrandColor;
   border-radius: inherit;
-  margin-right: 10px; 
   padding: 25px;
-  flex: 2;
+  flex: 3;
 }
 
 
 .aside-title{
-  font-size: large;
+  font-size: normal;
   font-weight: bold;
 }
 
@@ -20,6 +19,7 @@ aside{
 .aside-sub-title{
   display: flex;
   justify-content: space-between;
+  font-size: small;
 
   :first-child{
     color: grey;
@@ -31,7 +31,6 @@ aside{
   }
 
   img{
-    // background-color: #000;
     width: 15px;
     height: 15px;
   }
@@ -59,9 +58,11 @@ aside section ul{
     border: 1px solid rgb(180, 180, 180);
     margin-right: 5px;
     border-radius: 4px;
+    
   /* .container input:checked ~ .checkmark {
     background-color: #2196F3;
   }*/
+
   }
 
   input:checked {
@@ -71,6 +72,7 @@ aside section ul{
 
   div span{
     font-size: small;
+    font-weight: lighter;
   }
 
   .number{
@@ -78,7 +80,7 @@ aside section ul{
     color: lighten($asideColor, 5);
     border-radius: 5px;
     padding: 5px;
-    font-size: x-small;
+    font-size: xx-small;
   }
 
   img {

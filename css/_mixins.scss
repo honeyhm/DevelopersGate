@@ -1,3 +1,28 @@
 @mixin verticalGradient($fromColor , $toColor) {
   background: linear-gradient($fromColor, $fromColor 65%, $toColor 65%, $toColor);
 }
+
+/* Media Query Mixins */
+@mixin bp-mobile {
+	@media only screen and (max-width: 480px) {
+		@content;
+	}
+}
+
+@mixin bp-tablet {
+	@media only screen and (max-width: 480px) {
+		@content;
+	}
+}
+
+@mixin bp-normal-screen {
+	@media only screen and (max-width: 480px) {
+		@content;
+	}
+}
+
+@mixin bp-large-screen {
+	@media only screen and (min-width: 1100px) {
+		@content;
+	}
+}

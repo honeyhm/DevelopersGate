@@ -8,22 +8,22 @@ $mainBaseColor: #6666CC;
     display: flex;
     justify-content: flex-start;
     list-style: none;
-    margin: 0px;
-    padding: 0px;
 
 
     li{
       display: flex;
       border-radius:18px;
-      margin: 10px;
-      padding: 8px;
+      margin: 8px;
+      padding: 7px;
       width:25%;
-      height:45px;
 
       img{
         width: 30px;
         height: 30px;
         margin:0 5px;
+        padding: 5px;
+        border-radius: 8px;
+        background-color: rgba(#fff,0.2);
       }
 
       .vacancy-numder{
@@ -33,25 +33,26 @@ $mainBaseColor: #6666CC;
 
       .category-name{
         font-size: small;
+        font-weight: lighter;
         color: rgba(255, 255, 255, 0.9);
       }
 
     }
 
     li:first-child{
-      background-color: rgba(106, 106, 243 ,0.9);
+      background-color: rgba(106, 106, 243 ,0.8);
     }
 
     li:nth-child(2){
-      background-color: rgba(147, 103, 230, 0.9);
+      background-color: rgba(147, 103, 230, 0.8);
     }
 
     li:nth-child(3){
-      background-color: rgba(255, 91, 132,0.9);
+      background-color: rgba(255, 91, 132,0.8);
     }
 
     li:last-child{
-      background-color: rgba(255, 153, 51, 0.9);  
+      background-color: rgba(255, 153, 51, 0.8);  
     }
 
   }
@@ -60,83 +61,84 @@ $mainBaseColor: #6666CC;
 
 
 .main-title{
-  margin: 20px;
+  margin-left: 20px;
   font-weight: bold;
-  font-size: large;
+  font-size: normal;
 }
 
 
 
 .article-flex{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 10px;
+  padding:15px;
+  margin-bottom: 15px;
+  //scrollbar
+  height: 500px;
+  overflow-y: auto;//hidden?auto
 
   article{
     background-color: $articleBackgrandColor;
     border-radius: 18px;
-    margin: 10px;
-    /* width: 31%; */
-    height:270px;
-    width: 260px;
+    position: relative;
+    padding: 15px;
+    margin-bottom: 15px;
+    width: 32%;
+    height:220px;
+  
+
 
     div img{
-      margin: 10px;
-      border-radius: 18px;
-      width: 60px;
-      height: 60px;
+      margin-bottom: 10px;
+      border-radius: 15px;
+      width: 45px;
+      height: 45px;
     }
 
     .user-name{
-      font-weight: bold;
-      margin: 10px;
+      font-size: small;
+      font-weight: bolder;
     }
 
     .price{
+      font-size: small;
+      font-weight: bold;
       color: $mainBaseColor;
     }
 
     .vocation{
-      font-size: small;
+      font-size: x-small;
+      font-weight: bold;
       color: grey;
-      /* margin-top: 7px; */
-      margin: 10px;
+      margin: 5px 0px;
     }
 
-
   }
-
 
 }
 
 
 
-
 .attributes{
-  margin-left: 10px;
 
   ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     list-style: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 15px 0px;
+    // padding: 0px;
 
     li{
       // background-color: #f0f0fa;
       background-color: lighten($mainBaseColor, 35);
       border-radius: 10px;
-      margin: 2Px;
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-top: 3px;
-      padding-bottom: 3px;
       color: Grey ;
-      font-size: small;
-      padding:5px 18px;
-
+      font-size: x-small;
+      padding:3px 12px;
+      margin-right: 5px;
+      margin-bottom: 5px;
     }
 
   }
@@ -144,29 +146,28 @@ $mainBaseColor: #6666CC;
 }
 
 
-
-article div button{
-  border-radius: 10px;
-  border:1px solid rgb(199, 199, 199);
-  height: 35px;
-  width: 100px;
-}
-
-.button{
+.article-btn{
   display: flex;
-  justify-content: center;
-  margin-top: 15px;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 10px;
 
   :first-child{
-    background-color: rgba(88, 76, 247 ,0.8);
+    background-color: rgba(88, 76, 247 ,0.75);
     color: #fff;
-    margin-right: 3px;
+    font-size: small;
+    font-weight: lighter;
+    border-radius: 10px;
+    border:1px solid rgb(199, 199, 199);
+    height: 30px;
+    width: 85px;
+    margin-left: 5px;
   }
 
   :last-child{
+    @extend :first-child;
     background-color: #fff;
     color: #6666CC;
-    margin-left: 3px;
   }
 
 }

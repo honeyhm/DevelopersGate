@@ -1,3 +1,4 @@
+/* Media Query Mixins */
 * {
   margin: 0;
   padding: 0;
@@ -7,10 +8,9 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(#f3f3fc), color-stop(65%, #f3f3fc), color-stop(65%, #e9e9f8), to(#e9e9f8));
   background: linear-gradient(#f3f3fc, #f3f3fc 65%, #e9e9f8 65%, #e9e9f8);
-  margin: 0;
-  padding: 0;
 }
 
 .flex-container {
@@ -22,25 +22,20 @@ body {
           box-shadow: 0 4px 8px 0 rgba(20, 0, 40, 0.2), 0 6px 20px 0 rgba(20, 0, 40, 0.19);
   border-radius: 18px;
   margin: 5% auto;
-  padding: 5% auto;
-  /* width: 70vw;
-  height: 70vh; */
-  max-width: 1100px;
-  /* width: 90%; */
+  width: 70%;
 }
 
 aside {
   background-color: #fff;
   border-radius: inherit;
-  margin-right: 10px;
   padding: 25px;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
 }
 
 .aside-title {
-  font-size: large;
+  font-size: normal;
   font-weight: bold;
 }
 
@@ -51,9 +46,10 @@ aside {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  font-size: small;
 }
 
-.aside-sub-title :first-child {
+.aside-sub-title :first-child, .aside-sub-title .article-btn :last-child, .article-btn .aside-sub-title :last-child {
   color: grey;
 }
 
@@ -102,6 +98,7 @@ aside section ul {
 
 .checkbox-list div span {
   font-size: small;
+  font-weight: lighter;
 }
 
 .checkbox-list .number {
@@ -109,7 +106,7 @@ aside section ul {
   color: #a37dea;
   border-radius: 5px;
   padding: 5px;
-  font-size: x-small;
+  font-size: xx-small;
 }
 
 .checkbox-list img {
@@ -118,39 +115,34 @@ aside section ul {
 }
 
 .flex-helper {
-  margin: 0;
-  -webkit-box-flex: 9;
-      -ms-flex: 9;
-          flex: 9;
+  -webkit-box-flex: 11;
+      -ms-flex: 11;
+          flex: 11;
 }
 
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   background-color: #fff;
   border-radius: 0px 18px;
-  height: 8%;
-  /* padding: 10px; */
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  height: 10%;
+  width: inherit;
+  margin-left: 15px;
+  padding-left: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* all direct childs of .header */
-.header > * {
-  margin-right: 10px;
-  padding-top: 1.5%;
-  /* padding-left: 10%; */
-}
-
 .nav {
-  -webkit-box-flex: 3;
-      -ms-flex-positive: 3;
-          flex-grow: 3;
+  -webkit-box-flex: 4;
+      -ms-flex-positive: 4;
+          flex-grow: 4;
 }
 
 .nav ul {
@@ -163,8 +155,6 @@ aside section ul {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   height: 100%;
-  margin-left: 30px;
-  padding-top: 8px;
 }
 
 .nav ul li {
@@ -178,14 +168,10 @@ aside section ul {
   display: block;
   text-decoration: none;
   text-align: center;
+  font-size: small;
   color: #6666CC;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
-
-.nav ul .active {
-  -webkit-box-shadow: inset 0 -2px #6666CC;
-          box-shadow: inset 0 -2px #6666CC;
 }
 
 .search-container {
@@ -204,20 +190,21 @@ aside section ul {
 }
 
 .search-container input {
+  width: 100px;
   border: 0;
 }
 
 .search-container button {
-  border-radius: 18px;
+  border-radius: 10px;
   border: 0;
   background: #e9e9fc;
+  padding: 5px 8px;
 }
 
 .search-container img {
-  width: 40px;
-  height: 40px;
-  border-radius: 15px;
-  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 18px;
 }
 
 .profile {
@@ -230,24 +217,23 @@ aside section ul {
 }
 
 .profile img {
-  /* display: inline-block; */
   border-radius: 12px;
   width: 40px;
   height: 40px;
-  margin-right: 10px;
+  margin: 0px 10px;
 }
 
 .profile #profile-name {
   color: gray;
 }
 
-.profile #profile-name :first-child {
-  font-size: small;
-  margin: 2px 0px;
+.profile #profile-name :first-child, .profile #profile-name .article-btn :last-child, .article-btn .profile #profile-name :last-child {
+  font-size: x-small;
+  margin: 4px 0px;
 }
 
 .profile #profile-name :last-child {
-  font-size: large;
+  font-size: normal;
 }
 
 .categories {
@@ -262,8 +248,6 @@ aside section ul {
       -ms-flex-pack: start;
           justify-content: flex-start;
   list-style: none;
-  margin: 0px;
-  padding: 0px;
 }
 
 .categories ul li {
@@ -271,16 +255,18 @@ aside section ul {
   display: -ms-flexbox;
   display: flex;
   border-radius: 18px;
-  margin: 10px;
-  padding: 8px;
+  margin: 8px;
+  padding: 7px;
   width: 25%;
-  height: 45px;
 }
 
 .categories ul li img {
   width: 30px;
   height: 30px;
   margin: 0 5px;
+  padding: 5px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .categories ul li .vacancy-numder {
@@ -290,77 +276,80 @@ aside section ul {
 
 .categories ul li .category-name {
   font-size: small;
+  font-weight: lighter;
   color: rgba(255, 255, 255, 0.9);
 }
 
-.categories ul li:first-child {
-  background-color: rgba(106, 106, 243, 0.9);
+.categories ul li:first-child, .categories ul .article-btn li:last-child, .article-btn .categories ul li:last-child {
+  background-color: rgba(106, 106, 243, 0.8);
 }
 
 .categories ul li:nth-child(2) {
-  background-color: rgba(147, 103, 230, 0.9);
+  background-color: rgba(147, 103, 230, 0.8);
 }
 
 .categories ul li:nth-child(3) {
-  background-color: rgba(255, 91, 132, 0.9);
+  background-color: rgba(255, 91, 132, 0.8);
 }
 
 .categories ul li:last-child {
-  background-color: rgba(255, 153, 51, 0.9);
+  background-color: rgba(255, 153, 51, 0.8);
 }
 
 .main-title {
-  margin: 20px;
+  margin-left: 20px;
   font-weight: bold;
-  font-size: large;
+  font-size: normal;
 }
 
 .article-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  height: 500px;
+  overflow-y: auto;
 }
 
 .article-flex article {
   background-color: #fff;
   border-radius: 18px;
-  margin: 10px;
-  /* width: 31%; */
-  height: 270px;
-  width: 260px;
+  position: relative;
+  padding: 15px;
+  margin-bottom: 15px;
+  width: 32%;
+  height: 220px;
 }
 
 .article-flex article div img {
-  margin: 10px;
-  border-radius: 18px;
-  width: 60px;
-  height: 60px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  width: 45px;
+  height: 45px;
 }
 
 .article-flex article .user-name {
-  font-weight: bold;
-  margin: 10px;
+  font-size: small;
+  font-weight: bolder;
 }
 
 .article-flex article .price {
+  font-size: small;
+  font-weight: bold;
   color: #6666CC;
 }
 
 .article-flex article .vocation {
-  font-size: small;
+  font-size: x-small;
+  font-weight: bold;
   color: grey;
-  /* margin-top: 7px; */
-  margin: 10px;
-}
-
-.attributes {
-  margin-left: 10px;
+  margin: 5px 0px;
 }
 
 .attributes ul {
@@ -373,49 +362,44 @@ aside section ul {
       -ms-flex-pack: start;
           justify-content: flex-start;
   list-style: none;
-  margin: 0px;
-  padding: 0px;
+  margin: 15px 0px;
 }
 
 .attributes ul li {
   background-color: #ececf9;
   border-radius: 10px;
-  margin: 2Px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 3px;
-  padding-bottom: 3px;
   color: Grey;
-  font-size: small;
-  padding: 5px 18px;
+  font-size: x-small;
+  padding: 3px 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
 
-article div button {
-  border-radius: 10px;
-  border: 1px solid #c7c7c7;
-  height: 35px;
-  width: 100px;
-}
-
-.button {
+.article-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 15px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: absolute;
+  bottom: 10px;
 }
 
-.button :first-child {
-  background-color: rgba(88, 76, 247, 0.8);
+.article-btn :first-child, .article-btn :last-child {
+  background-color: rgba(88, 76, 247, 0.75);
   color: #fff;
-  margin-right: 3px;
+  font-size: small;
+  font-weight: lighter;
+  border-radius: 10px;
+  border: 1px solid #c7c7c7;
+  height: 30px;
+  width: 85px;
+  margin-left: 5px;
 }
 
-.button :last-child {
+.article-btn :last-child {
   background-color: #fff;
   color: #6666CC;
-  margin-left: 3px;
 }
 /*# sourceMappingURL=style.css.map */
