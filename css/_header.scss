@@ -19,38 +19,26 @@ $navTextColor: #6666CC;
 
 .nav{
   flex-grow: 4;
+  
+  display: flex;
+  align-items: stretch;
+  list-style: none;
+  justify-content: space-evenly;
+  height: 100%;
+  
+  a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: small;
+    color: $navTextColor;
+    padding-top: 8%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 
-  ul{
-    display: flex;
-    /* align-items: stretch; */
-    list-style: none;
-    justify-content: space-evenly;
-    height: 100%;
-
-    li{
-      width: 25%;
-      align-items: stretch;
-      // padding: 0px 20px;
-
-      a{
-        display: block;
-        text-decoration: none;
-        text-align: center;
-        font-size: small;
-        color: $navTextColor;
-        transition: 0.3s;
-      }
-      
-      // :first-child{
-      //   // padding-bottom: 30px;
-      //   align-items: stretch;
-      // }
-    }
-
-    .active{
-      // box-shadow: inset 0 -2px $navTextColor;
-    }
-
+  .active{
+    box-shadow: inset 0 -2px $navTextColor;
   }
 
 }
