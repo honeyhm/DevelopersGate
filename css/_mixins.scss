@@ -3,25 +3,25 @@
 }
 
 /* Media Query Mixins */
-@mixin bp-mobile {
-	@media only screen and (max-width: 480px) {
+@mixin bp-one {
+	@media only screen and (max-width: 1300px) {
 		@content;
 	}
 }
 
-@mixin bp-tablet {
-	@media only screen and (max-width: 480px) {
+@mixin bp-two {
+	@media only screen and (max-width: 950px) {
 		@content;
 	}
 }
 
-@mixin bp-normal-screen {
-	@media only screen and (max-width: 480px) {
+@mixin bp-three {
+	@media only screen and (max-width: 755px) {
 		@content;
 	}
 }
 
-@mixin bp-large-screen {
+@mixin bp-four {
 	@media only screen and (min-width: 1100px) {
 		@content;
 	}

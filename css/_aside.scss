@@ -1,3 +1,5 @@
+@import 'header';
+@import 'mixins';
 $asideBackgrandColor:#fff;
 $asideColor: #9367e6;
 
@@ -7,8 +9,20 @@ aside{
   border-radius: inherit;
   padding: 25px;
   flex: 3;
+
+  @include bp-two{
+    flex:4;
+  }
+
+  @include bp-three{
+    display: none;
+  }
+
 }
 
+// @include bp-one{
+//   @extend .search-container;
+// }
 
 .aside-title{
   font-size: normal;
@@ -48,7 +62,9 @@ aside section ul{
   justify-content: space-between;
   margin: 5px 0px;
 
+
   input{
+    // position: relative;
     -webkit-appearance: none;
     -moz-appearance: none;
     -o-appearance: none;
@@ -58,12 +74,8 @@ aside section ul{
     border: 1px solid rgb(180, 180, 180);
     margin-right: 5px;
     border-radius: 4px;
-    
-  /* .container input:checked ~ .checkmark {
-    background-color: #2196F3;
-  }*/
-
   }
+
 
   input:checked {
     background-color:$asideColor;
@@ -89,3 +101,72 @@ aside section ul{
   }
 
 }
+
+
+// /* The container */
+// .checkbox-list div {
+//   display: block;
+//   position: relative;
+//   cursor: pointer;
+//   -webkit-user-select: none;
+//   -moz-user-select: none;
+//   -ms-user-select: none;
+//   user-select: none;
+// }
+
+// /* Hide the browser's default checkbox */
+// .checkbox-list div input {
+//   position: absolute;
+//   opacity: 0;
+//   cursor: pointer;
+//   height: 0;
+//   width: 0;
+// }
+
+// /* Create a custom checkbox */
+// .checkmark {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   height: 15px;
+//   width: 15px;
+//   border: 1px solid rgb(180, 180, 180);
+//   margin-right: 5px;
+//   border-radius: 4px;
+//   background-color: #fff;
+// }
+
+// /* On mouse-over, add a grey background color */
+// .checkbox-list div:hover input ~ .checkmark {
+//   background-color: #ccc;
+// }
+
+// /* When the checkbox is checked, add a blue background */
+// .checkbox-list div input:checked ~ .checkmark {
+//   background-color: #2196F3;
+// }
+
+// /* Create the checkmark/indicator (hidden when not checked) */
+// .checkmark:after {
+//   content: "";
+//   position: absolute;
+//   display: none;
+// }
+
+// /* Show the checkmark when checked */
+// .checkbox-list div input:checked ~ .checkmark:after {
+//   display: block;
+// }
+
+// /* Style the checkmark/indicator */
+// .checkbox-list div .checkmark:after {
+//   left: 9px;
+//   top: 5px;
+//   width: 5px;
+//   height: 10px;
+//   border: solid Grey;
+//   border-width: 0 3px 3px 0;
+//   -webkit-transform: rotate(45deg);
+//   -ms-transform: rotate(45deg);
+//   transform: rotate(45deg);
+// }

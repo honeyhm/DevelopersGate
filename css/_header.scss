@@ -1,3 +1,4 @@
+@import 'mixins';
 $headerBackgrandColor:#fff;
 $navTextColor: #6666CC;
 
@@ -11,6 +12,12 @@ $navTextColor: #6666CC;
   margin-left: 15px;
   padding-left: 20px;
   align-items: center;
+
+  // @include bp-three{
+  //   // flex-basis: 45%;
+  //   // width: 50%;
+  // }
+
 }
 
 /* all direct childs of .header */
@@ -21,7 +28,8 @@ $navTextColor: #6666CC;
   flex-grow: 4;
   
   display: flex;
-  align-items: stretch;
+  // align-items: stretch;
+  align-items: center;
   list-style: none;
   justify-content: space-evenly;
   height: 100%;
@@ -32,13 +40,25 @@ $navTextColor: #6666CC;
     text-align: center;
     font-size: small;
     color: $navTextColor;
-    padding-top: 8%;
+    // padding-top: 8%;
     padding-left: 5px;
     padding-right: 5px;
+
+    @include bp-three{
+      font-size: normal;
+      // padding-top: -5px;
+    }
+
   }
 
   .active{
     box-shadow: inset 0 -2px $navTextColor;
+    align-self:stretch;
+    padding-top: 25px;
+
+    @include bp-three{
+      padding-top: 35px;
+    }
   }
 
 }
@@ -69,6 +89,10 @@ $navTextColor: #6666CC;
     border-radius: 18px;
   }
 
+  @include bp-one{
+    display: none;
+  }
+
 }
 
 
@@ -95,6 +119,10 @@ $navTextColor: #6666CC;
       font-size: normal;
     }
 
+  }
+
+  @include bp-two{
+    display: none;
   }
 
 }
