@@ -124,6 +124,8 @@ main{
 }
 
 
+
+
 .main-title{
   margin-left: 20px;
   font-weight: bold;
@@ -136,6 +138,7 @@ main{
 
 
 
+
 .article-flex{
   display: flex;
   justify-content: space-between;
@@ -143,8 +146,8 @@ main{
   padding:15px;
   margin-bottom: 15px;
   //scrollbar
-  height: 460px;
-  overflow-y: auto;//hidden?auto
+  height: 480px;
+  overflow-y: hidden;//hidden?auto
 
   @include bp-one{
     justify-content: space-evenly;
@@ -155,19 +158,37 @@ main{
     border-radius: 18px;
     position: relative;
     padding: 15px;
-    margin-bottom: 15px;
-    width: 210px;
+    margin-bottom: 20px;
+    width: 215px;
     // width: 32%;
     height:220px;
   
 
+    .article-image{
+      display: flex;
+      justify-content: space-between;
 
-    div img{
-      margin-bottom: 10px;
-      border-radius: 15px;
-      width: 45px;
-      height: 45px;
+      :first-child{
+        margin-bottom: 10px;
+        border-radius: 15px;
+        width: 45px;
+        height: 45px;
+      }
+
+      :last-child{
+        width: 15px;
+        height: 15px;
+
+      }
+
     }
+
+    // div img{
+    //   margin-bottom: 10px;
+    //   border-radius: 15px;
+    //   width: 45px;
+    //   height: 45px;
+    // }
 
     .user-name{
       font-size: small;

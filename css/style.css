@@ -270,9 +270,10 @@ aside section ul {
 }
 
 .flex-helper {
-  -webkit-box-flex: 11;
-      -ms-flex: 11;
-          flex: 11;
+  -webkit-box-flex: 12;
+      -ms-flex: 12;
+          flex: 12;
+  padding-bottom: 30px;
 }
 
 /* Media Query Mixins */
@@ -591,8 +592,8 @@ main {
       flex-wrap: wrap;
   padding: 15px;
   margin-bottom: 15px;
-  height: 460px;
-  overflow-y: auto;
+  height: 480px;
+  overflow-y: hidden;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -608,16 +609,30 @@ main {
   border-radius: 18px;
   position: relative;
   padding: 15px;
-  margin-bottom: 15px;
-  width: 210px;
+  margin-bottom: 20px;
+  width: 215px;
   height: 220px;
 }
 
-.article-flex article div img {
+.article-flex article .article-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.article-flex article .article-image :first-child, .article-flex article .article-image .article-btn :last-child, .article-btn .article-flex article .article-image :last-child {
   margin-bottom: 10px;
   border-radius: 15px;
   width: 45px;
   height: 45px;
+}
+
+.article-flex article .article-image :last-child {
+  width: 15px;
+  height: 15px;
 }
 
 .article-flex article .user-name {

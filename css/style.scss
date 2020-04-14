@@ -11,7 +11,6 @@ $baseColor:#f3f3fc;
 
 body{
   font-family: Arial, Helvetica, sans-serif;
-  // height: 100%;
   // background: -webkit-linear-gradient($baseColor, $baseColor 65%, #e9e9f8 65%, #e9e9f8);
   @include verticalGradient($baseColor, #e9e9f8);
 }
@@ -26,15 +25,13 @@ body{
   // @include bp-tablet{
   //   margin:10Px;
   // }
-
-  // width: 70%;
-  // height: 100%;
 }
 
 @import 'aside';
 
 .flex-helper{
-  flex: 11;
+  flex: 12;
+  padding-bottom: 30px;
 }
 
 @import 'header';
