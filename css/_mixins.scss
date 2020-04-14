@@ -10,7 +10,7 @@
 }
 
 @mixin bp-two {
-	@media only screen and (max-width: 950px) {
+	@media only screen and (max-width: 1050px) {
 		@content;
 	}
 }

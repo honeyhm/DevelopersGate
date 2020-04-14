@@ -20,23 +20,28 @@ aside{
 
 }
 
-// @include bp-one{
-//   @extend .search-container;
-// }
 
 .aside-title{
   font-size: normal;
   font-weight: bold;
 }
 
+// .aside-title:before{
+//   @include bp-one{
+//     @extend .search-container;
+//   }
+// }
+
+
 
 .aside-sub-title{
   display: flex;
   justify-content: space-between;
-  font-size: small;
+  
 
   :first-child{
     color: grey;
+    font-size: small;
   }
   
   .open{
@@ -44,9 +49,9 @@ aside{
     font-weight: bold ;
   }
 
-  img{
-    width: 15px;
-    height: 15px;
+  :last-child{
+    color: grey;
+    font-size: x-small;
   }
 
 }
@@ -76,36 +81,34 @@ aside section ul{
   }
   input:not(:checked)+label:before,
   input:checked+label:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 14px;
-  height: 14px;
-  border-radius: 4px;
-  border:1px solid rgb(180, 180, 180);
-  outline: none;
-}
-
-input:not(:checked)+label:after,
-input:checked+label:after {
-  content: '✔';
-  position: absolute;
-  left: 0px;
-  font-size: 20px;
-  line-height: 0.8;
-  color: #fff;
-  background-color: $asideColor;
-  border-radius: 4px;
-}
-
-input:not(:checked)+label:after {
-  opacity: 0;
-  transform: scale(0);
-}
-input:checked+label:after {
-  opacity: 1;
-  transform: scale(1);
-}
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    border:1px solid rgb(180, 180, 180);
+    outline: none;
+  }
+  input:not(:checked)+label:after,
+  input:checked+label:after {
+    content: '✔';
+    position: absolute;
+    left: 0px;
+    font-size: 20px;
+    line-height: 0.8;
+    color: #fff;
+    background-color: $asideColor;
+    border-radius: 4px;
+  }
+  input:not(:checked)+label:after {
+    opacity: 0;
+    transform: scale(0);
+  }
+  input:checked+label:after {
+    opacity: 1;
+    transform: scale(1);
+  }
 
    div label{
     font-size: small;

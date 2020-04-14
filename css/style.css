@@ -46,7 +46,6 @@ body {
           align-items: center;
 }
 
-/* all direct childs of .header */
 .nav {
   -webkit-box-flex: 4;
       -ms-flex-positive: 4;
@@ -116,16 +115,17 @@ body {
 }
 
 .search-container button {
+  width: 35px;
+  height: 35px;
   border-radius: 10px;
   border: 0;
   background: #e9e9fc;
   padding: 5px 8px;
 }
 
-.search-container img {
-  width: 20px;
-  height: 20px;
-  border-radius: 18px;
+.search-container #search-icon {
+  color: #6666CC;
+  font-size: small;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -163,7 +163,7 @@ body {
   font-size: normal;
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1050px) {
   .profile {
     display: none;
   }
@@ -179,7 +179,7 @@ aside {
           flex: 3;
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1050px) {
   aside {
     -webkit-box-flex: 4;
         -ms-flex: 4;
@@ -205,11 +205,11 @@ aside {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: small;
 }
 
 .aside-sub-title :first-child, .aside-sub-title .article-btn :last-child, .article-btn .aside-sub-title :last-child {
   color: grey;
+  font-size: small;
 }
 
 .aside-sub-title .open {
@@ -217,9 +217,9 @@ aside {
   font-weight: bold;
 }
 
-.aside-sub-title img {
-  width: 15px;
-  height: 15px;
+.aside-sub-title :last-child {
+  color: grey;
+  font-size: x-small;
 }
 
 aside section ul {
@@ -329,7 +329,6 @@ aside section ul {
           align-items: center;
 }
 
-/* all direct childs of .header */
 .nav {
   -webkit-box-flex: 4;
       -ms-flex-positive: 4;
@@ -399,16 +398,17 @@ aside section ul {
 }
 
 .search-container button {
+  width: 35px;
+  height: 35px;
   border-radius: 10px;
   border: 0;
   background: #e9e9fc;
   padding: 5px 8px;
 }
 
-.search-container img {
-  width: 20px;
-  height: 20px;
-  border-radius: 18px;
+.search-container #search-icon {
+  color: #6666CC;
+  font-size: small;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -446,7 +446,7 @@ aside section ul {
   font-size: normal;
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1050px) {
   .profile {
     display: none;
   }
@@ -477,7 +477,7 @@ main {
   list-style: none;
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1050px) {
   .categories ul {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -507,7 +507,7 @@ main {
   }
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1050px) {
   .categories ul li {
     border-radius: 18px;
   }
@@ -520,30 +520,28 @@ main {
   }
 }
 
-.categories ul li img {
-  width: 30px;
-  height: 30px;
+.categories ul li #category-icon {
+  color: white;
   margin: 0 5px;
-  padding: 5px;
+  padding: 7px 8.5px;
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
 @media only screen and (max-width: 1300px) {
-  .categories ul li img {
-    height: 20px;
-    width: 20px;
-    padding: 0px;
+  .categories ul li #category-icon {
+    font-size: small;
+    height: 25px;
+    width: 25px;
+    padding: 6px 7px;
     margin: 0px;
   }
 }
 
-@media only screen and (max-width: 950px) {
-  .categories ul li img {
-    width: 30px;
-    height: 30px;
+@media only screen and (max-width: 1050px) {
+  .categories ul li #category-icon {
     margin: 0 5px;
-    padding: 5px;
+    padding: 7px 8px;
   }
 }
 
@@ -558,7 +556,7 @@ main {
   }
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1050px) {
   .categories ul li .vacancy-numder {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -574,13 +572,13 @@ main {
 
 @media only screen and (max-width: 1300px) {
   .categories ul li .category-name {
-    font-size: x-small;
+    font-size: small;
     font-weight: normal;
     margin: 5px;
   }
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1050px) {
   .categories ul li .category-name {
     font-size: small;
     margin: 0px;
@@ -665,8 +663,8 @@ main {
 }
 
 .article-flex article .article-image :last-child {
-  width: 15px;
-  height: 15px;
+  color: grey;
+  font-size: small;
 }
 
 .article-flex article .user-name {
